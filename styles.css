@@ -1,8 +1,5 @@
-/* ============================================
-   Portfolio - Pure CSS
-   ============================================ */
 
-/* Variables */
+
 :root {
   --bg-primary: #0a0f1c;
   --bg-secondary: #111827;
@@ -19,7 +16,6 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reset */
 *,
 *::before,
 *::after {
@@ -58,7 +54,6 @@ ul {
   list-style: none;
 }
 
-/* Cursor Glow */
 .cursor-glow {
   position: fixed;
   width: 600px;
@@ -72,9 +67,7 @@ ul {
   transition: opacity 0.5s ease;
 }
 
-/* ============================================
-   Navigation
-   ============================================ */
+
 .nav {
   position: fixed;
   top: 0;
@@ -148,7 +141,7 @@ ul {
   width: 100%;
 }
 
-/* Mobile Toggle */
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -179,9 +172,7 @@ ul {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ============================================
-   Hero Section
-   ============================================ */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -239,7 +230,7 @@ ul {
   flex-wrap: wrap;
 }
 
-/* Hero Decoration */
+
 .hero-decoration {
   position: absolute;
   top: 0;
@@ -266,9 +257,7 @@ ul {
   -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
 }
 
-/* ============================================
-   Buttons
-   ============================================ */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -311,9 +300,7 @@ ul {
   font-size: 1rem;
 }
 
-/* ============================================
-   Sections
-   ============================================ */
+
 .section {
   padding: 100px 24px;
 }
@@ -348,9 +335,7 @@ ul {
   max-width: 300px;
 }
 
-/* ============================================
-   About Section
-   ============================================ */
+
 .about-content {
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -452,9 +437,7 @@ ul {
   left: 12px;
 }
 
-/* ============================================
-   Filter Bar
-   ============================================ */
+
 .filter-bar {
   display: flex;
   gap: 12px;
@@ -485,9 +468,7 @@ ul {
   color: var(--bg-primary);
 }
 
-/* ============================================
-   Projects Grid
-   ============================================ */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -622,9 +603,7 @@ ul {
   border: 1px solid rgba(56, 189, 248, 0.15);
 }
 
-/* ============================================
-   Skills Grid
-   ============================================ */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -680,9 +659,7 @@ ul {
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ============================================
-   Contact Section
-   ============================================ */
+
 .contact-section {
   text-align: center;
   max-width: 600px;
@@ -710,9 +687,7 @@ ul {
   margin-bottom: 40px;
 }
 
-/* ============================================
-   Footer
-   ============================================ */
+
 .footer {
   padding: 24px;
   text-align: center;
@@ -742,9 +717,7 @@ ul {
   color: var(--text-muted);
 }
 
-/* ============================================
-   Side Elements (Desktop Only)
-   ============================================ */
+
 .side-element {
   position: fixed;
   bottom: 0;
@@ -801,9 +774,7 @@ ul {
   transform: translateY(-3px);
 }
 
-/* ============================================
-   Project Modal
-   ============================================ */
+
 .modal {
   position: fixed;
   inset: 0;
@@ -967,7 +938,6 @@ ul {
   border-radius: 100px;
 }
 
-/* Modal Details */
 .modal-details {
   padding: 32px;
 }
@@ -1011,7 +981,6 @@ ul {
   border: 1px solid rgba(56, 189, 248, 0.15);
 }
 
-/* Project View Text */
 .project-view-text {
   font-family: var(--font-mono);
   font-size: 0.875rem;
@@ -1027,7 +996,6 @@ ul {
   box-shadow: 0 0 20px var(--accent-glow);
 }
 
-/* Modal Responsive */
 @media (max-width: 768px) {
   .modal-content {
     width: 95%;
@@ -1065,9 +1033,7 @@ ul {
     font-size: 1.25rem;
   }
 }
-/* ============================================
-   Contact Buttons
-   ============================================ */
+
 .contact-buttons {
   display: flex;
   gap: 20px;
@@ -1098,9 +1064,7 @@ ul {
    transform: translateY(-3px);
 }
 
-/* ============================================
-   Animations
-   ============================================ */
+
    .animate-in {
   opacity: 0;
   transform: translateY(30px);
@@ -1119,7 +1083,6 @@ ul {
   }
 }
 
-/* Scroll reveal */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -1131,9 +1094,7 @@ ul {
   transform: translateY(0);
 }
 
-/* ============================================
-   Responsive
-   ============================================ */
+
 @media (max-width: 1080px) {
   .side-element {
     display: none;

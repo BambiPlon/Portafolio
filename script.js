@@ -1,10 +1,6 @@
-/* ============================================
-   Portfolio - Vanilla JavaScript
-   ============================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ---- Cursor Glow Effect ----
   const cursorGlow = document.getElementById('cursorGlow');
   
   if (window.innerWidth > 768) {
@@ -19,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---- Navigation Scroll Effect ----
   const nav = document.getElementById('nav');
   let lastScroll = 0;
 
@@ -35,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
     lastScroll = currentScroll;
   });
 
-  // ---- Mobile Navigation Toggle ----
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
 
@@ -44,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.classList.toggle('open');
   });
 
-  // Close mobile menu on link click
   var mobileLinks = navLinks.querySelectorAll('.nav-link');
   mobileLinks.forEach(function (link) {
     link.addEventListener('click', function () {
@@ -53,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ---- Active Navigation Link ----
   var sections = document.querySelectorAll('section[id]');
 
   function updateActiveLink() {
@@ -84,13 +76,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', updateActiveLink);
 
-  // ---- Project Filtering ----
   var filterButtons = document.querySelectorAll('.filter-btn');
   var projectCards = document.querySelectorAll('.project-card');
 
   filterButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      // Update active button
+
       filterButtons.forEach(function (b) {
         b.classList.remove('active');
       });
@@ -98,12 +89,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var filter = btn.getAttribute('data-filter');
 
-      // Animate out
+   
       projectCards.forEach(function (card) {
         card.classList.add('fade-out');
       });
 
-      // After animation, show/hide
+      
       setTimeout(function () {
         projectCards.forEach(function (card) {
           var category = card.getAttribute('data-category');
@@ -119,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ---- Scroll Reveal Animation ----
+  
   var revealElements = document.querySelectorAll(
     '.project-card, .skill-card, .about-content, .contact-section'
   );
@@ -141,9 +132,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   window.addEventListener('scroll', checkReveal);
-  checkReveal(); // Check on load
+  checkReveal(); 
 
-  // ---- Skill Bars Animation ----
+  
   var skillBars = document.querySelectorAll('.skill-progress');
   var skillsAnimated = false;
 
@@ -168,9 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   window.addEventListener('scroll', animateSkillBars);
-  animateSkillBars(); // Check on load
+  animateSkillBars();
 
-  // ---- Smooth scroll for anchor links ----
+ 
   var anchorLinks = document.querySelectorAll('a[href^="#"]');
   anchorLinks.forEach(function (link) {
     link.addEventListener('click', function (e) {
@@ -187,7 +178,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-// ---- Typing effect for greeting ----
   var greeting = document.querySelector('.hero-greeting');
   if (greeting) {
     var text = greeting.textContent;
@@ -207,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(typeWriter, 500);
   }
 
-  // ---- Project Modal with Gallery ----
+  
   var projectsData = {
     '1': {
       label: 'Proyecto Destacado',
@@ -239,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var currentProject = null;
   var currentImageIndex = 0;
 
-  // Open modal on project card click
+ 
   var projectCardsModal = document.querySelectorAll('.project-card');
   projectCardsModal.forEach(function(card) {
     card.addEventListener('click', function() {
@@ -254,12 +244,12 @@ document.addEventListener('DOMContentLoaded', function () {
     currentProject = projectsData[projectId];
     currentImageIndex = 0;
 
-    // Update modal content
+    
     modalLabel.textContent = currentProject.label;
     modalTitle.textContent = currentProject.title;
     modalDescription.textContent = currentProject.description;
 
-    // Update tech tags
+   
     modalTech.innerHTML = '';
     currentProject.tech.forEach(function(tech) {
       var li = document.createElement('li');
@@ -267,10 +257,10 @@ document.addEventListener('DOMContentLoaded', function () {
       modalTech.appendChild(li);
     });
 
-    // Update gallery
+   
     updateGallery();
 
-    // Generate thumbnails
+    
     galleryThumbnails.innerHTML = '';
     currentProject.images.forEach(function(img, index) {
       var thumb = document.createElement('div');
@@ -283,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
       galleryThumbnails.appendChild(thumb);
     });
 
-    // Show modal
+   
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -299,7 +289,6 @@ document.addEventListener('DOMContentLoaded', function () {
     galleryImage.src = currentProject.images[currentImageIndex];
     galleryCounter.textContent = (currentImageIndex + 1) + ' / ' + currentProject.images.length;
 
-    // Update thumbnails
     var thumbs = galleryThumbnails.querySelectorAll('.gallery-thumb');
     thumbs.forEach(function(thumb, index) {
       if (index === currentImageIndex) {
@@ -322,13 +311,13 @@ document.addEventListener('DOMContentLoaded', function () {
     updateGallery();
   }
 
-  // Event listeners
+ 
   modalClose.addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', closeModal);
   galleryNext.addEventListener('click', nextImage);
   galleryPrev.addEventListener('click', prevImage);
 
-  // Keyboard navigation
+  
   document.addEventListener('keydown', function(e) {
     if (!modal.classList.contains('active')) return;
     
