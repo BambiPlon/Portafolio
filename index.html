@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio | Desarrollador Web</title>
+  <meta name="description" content="Portafolio de proyectos de desarrollo web con HTML, CSS y JavaScript">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Cursor glow effect -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Dev<span class="logo-bracket">/&gt;</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">Sobre Mi</a>
+        <a href="#projects" class="nav-link">Proyectos</a>
+        <a href="#skills" class="nav-link">Habilidades</a>
+        <a href="#contact" class="nav-link">Contacto</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegacion">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting animate-in">Hola, mi nombre es</p>
+      <h1 class="hero-name animate-in delay-1">Eduardo Perez Nandi Salazar.</h1>
+      <h2 class="hero-tagline animate-in delay-2">Desarrollador de software | Ingeniero en Sistemas </h2>
+      <p class="hero-description animate-in delay-3">
+        Soy un desarrollador web especializado en crear interfaces accesibles
+        y de alto rendimiento. Actualmente enfocado en construir productos digitales
+        excepcionales con HTML, CSS y JavaScript.
+      </p>
+      <div class="hero-cta animate-in delay-4">
+        <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+        <a href="#contact" class="btn btn-outline">Contactar</a>
+      </div>
+    </div>
+    <div class="hero-decoration">
+      <div class="hero-grid"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <h2 class="section-title">
+        <span class="section-number">01.</span> Sobre Mi
+        <span class="section-line"></span>
+      </h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            Me apasiona el desarrollo web y llevo más de 3 años dedicándome al 100% a este campo. Comencé experimentando
+            con HTML y CSS, y desde entonces no he dejado de aprender, construir y mejorar proyectos para la web.
+          </p>
+          <p>
+            Mi enfoque principal es crear interfaces de usuario que no solo se vean bien, sino que también sean
+            accesibles, rápidas y funcionales. Tengo experiencia trabajando con PHP, JavaScript, HTML y CSS, lo que me
+            permite desarrollar soluciones completas tanto en frontend como en backend. Creo firmemente en escribir
+            código limpio, escalable y mantenible.
+          </p>
+          <p>
+            Cuando no estoy programando, disfruto seguir aprendiendo nuevas tecnologías, mejorar mis habilidades y
+            trabajar en proyectos que aporten valor real.
+          </p>
+          <div class="about-tech">
+            <p class="about-tech-title">Tecnologias con las que trabajo:</p>
+            <ul class="tech-list">
+              <li>HTML5 Semantico</li>
+              <li>CSS3 / Flexbox / Grid</li>
+              <li>JavaScript (ES6+)</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about-image-wrapper">
+          <div class="about-image">
+            <div class="about-image-placeholder">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="about-image-border"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <h2 class="section-title">
+        <span class="section-number">02.</span> Proyectos
+        <span class="section-line"></span>
+      </h2>
+
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1 -->
+        <!-- Project 1 -->
+        <article class="project-card" data-category="fullstack" data-project="1">
+          <div class="project-image">
+            <img src="public/images/Img Proyecto.png" alt="Sistema de Gestion de Inventario"
+              loading="lazy">
+            <div class="project-overlay">
+              <span class="project-view-text">Ver Proyecto</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <p class="project-label">Proyecto Destacado</p>
+            <h3 class="project-title">Sistema de Gestion de Inventario y Requisiciones de Compras</h3>
+            <p class="project-description">
+              Sistema web de gestion de inventario y requisiciones, con control de solicitudes, estados (pendiente,
+              aprobado), filtrado por fecha y estatus, y visualizacion en tarjetas dinamicas. Incluye autenticacion de
+              usuarios y panel administrativo intuitivo. Diseno moderno y completamente responsivo, optimizado para una
+              gestion eficiente de compras y seguimiento interno.
+            </p>
+            <ul class="project-tech">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>MySQL</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <h2 class="section-title">
+        <span class="section-number">03.</span> Habilidades
+        <span class="section-line"></span>
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h3 class="skill-title">HTML5</h3>
+          <p class="skill-text">Maquetado semantico, accesibilidad, formularios avanzados y SEO optimizado.</p>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="95"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+          </div>
+          <h3 class="skill-title">CSS3</h3>
+          <p class="skill-text">Flexbox, Grid, animaciones, variables CSS, diseno responsivo.</p>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="90"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="skill-title">JavaScript</h3>
+          <p class="skill-text">ES6+, DOM, APIs, async/await, patrones de diseno y programacion funcional.</p>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="85"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3 class="skill-title">Responsive Design</h3>
+          <p class="skill-text">Mobile-first, media queries, unidades relativas y testing multi-dispositivo.</p>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="92"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="section-inner contact-section">
+      <p class="contact-overline">04. Contacto</p>
+      <h2 class="contact-title">Trabajemos Juntos</h2>
+      <p class="contact-text">
+        Estoy abierto a nuevas oportunidades y proyectos interesantes.
+      </p>
+      <div class="contact-buttons">
+        <a href="mailto:eduardo.ing2026@outlook.com" class="btn btn-primary btn-lg contact-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Enviar Correo
+        </a>
+        <a href="https://wa.me/6383805951" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg contact-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <!-- Gallery -->
+      <div class="modal-gallery">
+        <div class="gallery-main">
+          <button class="gallery-nav gallery-prev" id="galleryPrev" aria-label="Imagen anterior">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <img src="" alt="Imagen del proyecto" class="gallery-image" id="galleryImage">
+          <button class="gallery-nav gallery-next" id="galleryNext" aria-label="Siguiente imagen">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+        <div class="gallery-thumbnails" id="galleryThumbnails"></div>
+        <div class="gallery-counter" id="galleryCounter">1 / 4</div>
+      </div>
+      
+      <!-- Project Details -->
+      <div class="modal-details">
+        <p class="modal-label" id="modalLabel">Proyecto Destacado</p>
+        <h3 class="modal-title" id="modalTitle">Titulo del Proyecto</h3>
+        <p class="modal-description" id="modalDescription">Descripcion del proyecto...</p>
+        <ul class="modal-tech" id="modalTech"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
