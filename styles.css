@@ -393,31 +393,22 @@ ul {
   height: 280px;
 }
 
-.about-image-placeholder {
+.about-profile-image {
   width: 100%;
   height: 100%;
-  background-color: var(--bg-card);
+  object-fit: cover;
+  object-position: center;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
+  background-color: var(--bg-card);
   position: relative;
   z-index: 2;
   overflow: hidden;
-  transition: all var(--transition);
+  transition: transform var(--transition), filter var(--transition);
+  filter: saturate(1.02) contrast(1.02);
 }
 
-.about-image-placeholder::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: rgba(56, 189, 248, 0.1);
-  transition: opacity var(--transition);
-}
-
-.about-image:hover .about-image-placeholder::after {
-  opacity: 0;
+.about-image:hover .about-profile-image {
+  transform: translate(-4px, -4px);
 }
 
 .about-image-border {
